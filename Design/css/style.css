@@ -1,5 +1,5 @@
 /*FONCE : rgba(48, 51, 64, 1)*/
-/*FONCE CLAIR : rgba(95, 103, 128, 1) */
+/*FONCE CLAIR : v */
 /*MIDDLE : rgba(156, 169, 209, 1)*/
 /*MIDDLE CLAIR : rgba(171, 185, 229, 1)*/
 /*CLAIR : rgba(190, 206, 255, 1)*/
@@ -31,15 +31,16 @@ article {
 	background-color: rgba(70, 82, 100, 1);
 	width: 20%;
 	height: 100%;
-	min-width: 120px;
+
 }
 
 .main {
-	position: absolute;
 	margin-left: 20%;
+	position: absolute;
 	top:35px;
 	background-color: rgba(190, 206, 255, 1);
 	width: 80%;
+	min-width: 752px;
 	height: 95%;
 	display: block;
 	z-index: 3;
@@ -47,48 +48,54 @@ article {
 }
 
 #nav {
-
-  position: absolute;
-  top:160px;
-  overflow: hidden; 
-  width: 20%;
-  color: #fff;
+	position: relative;
+	left:8px;
+	float: left;
+	width: 100%;
+	min-width: 210px;
+	top:160px;
+	overflow: hidden; 
+	color: #fff;
+	z-index: 4;
 }
 
 #nav .block {
-  z-index: 4;
-  position: fixed;
-  width: 20.56%;
+  width: 100%;
+  min-width: 210px;
+
 }
 
 #nav ul {
-
+  width: 100%;
+  min-width: 210px;
   display: block;
 }
 #nav ul:before, #nav ul:after {
-  content: "";
-  display: table;
+
 }
 #nav ul:after {
   clear: both;
 }
 #nav li {
-  display: block;
-  padding-left: 8px;
-  border-radius: 4px 0 0 4px;
+	display: block;
+	padding-left: 8px;
+	border-radius: 4px 0 0 4px;
+	z-index: 4;
+	display: block;
+	color: #ccc;
+	font-size: 1.9em;
+
+	font-weight: bold;
+	outline: none;
+	cursor: pointer;
+	padding-bottom: 8px;
+	padding-top: 8px;
 }
-#nav li  {
-  display: block;
-  color: #ccc;
-  font-size: 1.9em;
-  line-height: 1.28571em;
-  font-weight: bold;
-  outline: none;
-  cursor: pointer;
-}
+
 #nav li:focus, #nav li:hover {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.1);
+	color: #fff;
+	background: rgba(95, 103, 128, 1);
+	box-shadow: -8px -8px 8px rgba(50, 50, 50, 0.5);
 }
 #nav li.active {
   color: #fff;
@@ -101,13 +108,10 @@ article {
 }
 
 @media screen and (max-width: 1066px) {
-	.colg{
-		width: 210px
-	}
+	
 
 	.main {
 		margin-left: 210px;
-		width:(auto,100%);
 	}
 
 
