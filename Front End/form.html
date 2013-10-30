@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/stylesheet.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div id="form_issue_block">
+      <form id="form_issue">
+        <legend>Room 3</legend>
+        <div id="form_issue_content">
+          <textarea id="form_issue_description" rows="3" placeholder="Describe the issue"></textarea>
+          <p> Select an hour :</p>
+          <div class="btn-group" data-toggle="buttons-radio">
+            <button type="button" class="btn">10h <i class="icon-arrow-right"></i> 12h</button>
+            <button type="button" class="btn">12h <i class="icon-arrow-right"></i> 14h</button>
+            <button type="button" class="btn">14h <i class="icon-arrow-right"></i> 16h</button>
+            <button type="button" class="btn">16h <i class="icon-arrow-right"></i> 18h</button>
+          </div>
+
+          <br>
+          <br>
+          <p> Add a file, if necessary :</p>
+          <input id="form_issue_file" type="file" style="display:none">
+          <div id="form_issue_file_field" class="input-append">
+            <input id="form_issue_file_view" class="input-large" type="text">
+            <a class="btn" onclick="$('input[id=form_issue_file]').click();">Browse</a>
+          </div>
+        </div>
+          <div id="form_issue_submit_buttons" class="form-actions">
+            <button type="submit" class="btn btn-primary">Submit Repair Request</button>
+            <button type="button" class="btn">Cancel</button>
+          </div>
+      </form>
+    </div>
+
+    <div id="form_contact_block">
+      <form id="form_contact">
+        <legend>Contact</legend>
+        <div id="form_contact_content">
+          <select id="form_contact_select">
+            <option>Service to contact</option>
+            <option>Direction</option>
+            <option>Concierge</option>
+            <option>Billing</option>
+          </select>
+          <input id="form_contact_object" type="text" placeholder="Message Subject">
+          <textarea id="form_contact_message" rows="3" placeholder="Your message"></textarea>
+          <br>
+          <br>
+          <p> Add a file, if necessary :</p>
+          <input id="form_contact_file" type="file" style="display:none">
+          <div id="form_contact_file_field" class="input-append">
+            <input id="form_contact_file_view" class="input-large" type="text">
+            <a class="btn" onclick="$('input[id=form_contact_file]').click();">Browse</a>
+          </div>
+        </div>
+          <div id="form_contact_submit_buttons" class="form-actions">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn">Cancel</button>
+          </div>
+      </form>
+    </div>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/core.js"></script>
+  </body>
+</html>
