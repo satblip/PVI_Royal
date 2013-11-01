@@ -43,7 +43,7 @@ article {
 	top: 35px;
 	background-color: rgba(242,238,250, 0.98);
 	width: 80%;
-	
+	border-radius: 4px;
 	height: 90%;
 	display: block;
 	z-index: 3;
