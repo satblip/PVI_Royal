@@ -17,14 +17,13 @@
     <!--[if (lt IE 9) & (!IEMobile)]>
     <link rel="stylesheet" href="css/ie.css">
     <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/stylesheet.css" rel="stylesheet" media="screen">
 </head>
 
 <body>
-    <!--<header>
-        <div>
-            <p>a</P>
-        </div>
-    </header>-->
 
     <div class="colg">
         <nav id="nav" role="navigation">
@@ -41,9 +40,15 @@
                  --><li id="repairs_link">
                         <a>Repairs</a>
                     </li>
+<<<<<<< HEAD
                     <!--
                  --><li class="menubas" id="concierge_link">
                         <a>Concierge</a>
+=======
+                    <br><!--
+                 --><li id="concierge_link">
+                        <a>Contact</a>
+>>>>>>> master
                     </li>
                     <br>
                 </ul>
@@ -82,37 +87,77 @@
 
         <article id="page3" class="" style="display:none">
 
-            <h1>Repairs</h1>
+            <div id="form_issue_block">
+              <form id="form_issue">
+                <legend>Room 3</legend>
+                <div id="form_issue_content">
+                  <textarea id="form_issue_description" rows="3" placeholder="Describe the issue"></textarea>
+                  <p> Select an hour :</p>
+                  <div class="btn-group" data-toggle="buttons-radio">
+                    <button type="button" class="btn">10h <i class="icon-arrow-right"></i> 12h</button>
+                    <button type="button" class="btn">12h <i class="icon-arrow-right"></i> 14h</button>
+                    <button type="button" class="btn">14h <i class="icon-arrow-right"></i> 16h</button>
+                    <button type="button" class="btn">16h <i class="icon-arrow-right"></i> 18h</button>
+                  </div>
 
-            <p><a name="id380362"><!--anchor--></a>Horraire de la conciergerie</p>
-            <p><a name="id380370"><!--anchor--></a>News importantes</p>
-            <p><a name="id380380"><!--anchor--></a>blablabla</p>
-            <p><a name="id380387"><!--anchor--></a>"This is a handy cove," says he at length; "and a pleasant sittyated
-            grog-shop. Much company, mate?"</p>
-            <p><a name="id380391"><!--anchor--></a>My father told him no, very little company, the more was the pity.</p>
+                  <br>
+                  <br>
+                  <p> Add a file, if necessary :</p>
+                  <input id="form_issue_file" type="file" style="display:none">
+                  <div id="form_issue_file_field" class="input-append">
+                    <input id="form_issue_file_view" class="input-large" type="text">
+                    <a class="btn" onclick="$('input[id=form_issue_file]').click();">Browse</a>
+                  </div>
+                </div>
+                  <div id="form_issue_submit_buttons" class="form-actions">
+                    <button type="submit" class="btn btn-primary">Submit Repair Request</button>
+                    <button type="button" class="btn">Cancel</button>
+                  </div>
+              </form>
+            </div>
 
 
         </article>
 
         <article id="page4" class="" style="display:none">
 
-            <h1>Concierge</h1>
-
-            <p><a name="id380362"><!--anchor--></a>Horraire de la conciergerie</p>
-            <p><a name="id380370"><!--anchor--></a>News importantes</p>
-            <p><a name="id380380"><!--anchor--></a>blablabla</p>
-            <p><a name="id380387"><!--anchor--></a>"This is a handy cove," says he at length; "and a pleasant sittyated
-            grog-shop. Much company, mate?"</p>
-            <p><a name="id380391"><!--anchor--></a>My father told him no, very little company, the more was the pity.</p>
+            <div id="form_contact_block">
+              <form id="form_contact">
+                <legend>Contact</legend>
+                <div id="form_contact_content">
+                  <select id="form_contact_select">
+                    <option>Service to contact</option>
+                    <option>Direction</option>
+                    <option>Concierge</option>
+                    <option>Billing</option>
+                  </select>
+                  <input id="form_contact_object" type="text" placeholder="Message Subject">
+                  <textarea id="form_contact_message" rows="3" placeholder="Your message"></textarea>
+                  <br>
+                  <br>
+                  <p> Add a file, if necessary :</p>
+                  <input id="form_contact_file" type="file" style="display:none">
+                  <div id="form_contact_file_field" class="input-append">
+                    <input id="form_contact_file_view" class="input-large" type="text">
+                    <a class="btn" onclick="$('input[id=form_contact_file]').click();">Browse</a>
+                  </div>
+                </div>
+                  <div id="form_contact_submit_buttons" class="form-actions">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn">Cancel</button>
+                  </div>
+              </form>
+            </div>
 
 
         </article>
 
     </div>
 
-<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-
-<script src="js/design.js"></script>
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/core.js"></script>
+    <script src="js/design.js"></script>
 
 </body>
 </html>
