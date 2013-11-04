@@ -1,11 +1,13 @@
-/*FONCE : rgba(48, 51, 64, 1)*/
-/*FONCE CLAIR : v */
-/*MIDDLE : rgba(156, 169, 209, 1)*/
-/*MIDDLE CLAIR : rgba(171, 185, 229, 1)*/
-/*CLAIR : rgba(190, 206, 255, 1)*/
+/*
+@fonce {rgba(49,49,51, 1)}
+@fonceclair {rgba(60,59,62, 1)}
+@middle {rgba(72,71,75, 1)}
+@middleclair {rgba(134,132,138, 1)}
+@CLAIR {rgba(242,238,250, 1)}
+*/
 
 body {
-	background-color: rgba(70, 82, 100, 1)
+	background: url('../img/dgreyok.jpg') repeat;
 	}
 
 /*header {
@@ -26,33 +28,34 @@ article {
 .colg {
 	
 	position: absolute;
-	left: 0;
-	top:35px;
-	background-color: rgba(70, 82, 100, 1);
+	left: -35px;
+	
+	
 	width: 20%;
-	height: 100%;
+	height: 90%;
 
 }
 
 .main {
 	margin-left: 20%;
 	position: absolute;
-	top:35px;
-	background-color: rgba(190, 206, 255, 1);
+	right:35px;
+	top: 35px;
+	background-color: rgba(242,238,250, 0.98);
 	width: 80%;
-	min-width: 752px;
-	height: 95%;
+	border-radius: 4px;
+	height: 90%;
 	display: block;
 	z-index: 3;
-	box-shadow: -8px -8px 8px rgba(50, 50, 50, 0.9);
+	box-shadow: -8px -8px 8px rgba(0, 0, 0, 0.5);
 }
 
 #nav {
 	position: relative;
-	left:8px;
-	float: left;
-	width: 100%;
-	min-width: 210px;
+	padding-left: 40px;
+	float: right;
+	width: 80%;
+	
 	top:160px;
 	overflow: hidden; 
 	color: #fff;
@@ -66,8 +69,8 @@ article {
 }
 
 #nav ul {
-  width: 100%;
-  min-width: 210px;
+  padding-left: 0;
+  
   display: block;
 }
 #nav ul:before, #nav ul:after {
@@ -77,6 +80,7 @@ article {
   clear: both;
 }
 #nav li {
+	width: 100%;
 	display: block;
 	padding-left: 8px;
 	border-radius: 4px 0 0 4px;
@@ -84,27 +88,34 @@ article {
 	display: block;
 	color: #ccc;
 	font-size: 1.9em;
-
 	font-weight: bold;
 	outline: none;
 	cursor: pointer;
-	padding-bottom: 8px;
-	padding-top: 8px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	background: rgba(72,71,75, 0.5);
+	border-left:1px solid rgba(49,49,51,1);
+	border-top: 1px solid rgba(49,49,51,1);
+}
+
+.menubas{
+	border-bottom: 1px solid rgba(49,49,51,1);
 }
 
 #nav li:focus, #nav li:hover {
 	color: #fff;
-	background: rgba(95, 103, 128, 1);
-	box-shadow: -8px -8px 8px rgba(50, 50, 50, 0.5);
+	background: rgba(134,132,138, 0.5);
+	
 }
 #nav li.active {
-  color: #fff;
-  background-color: rgba(190, 206, 255, 1);
+  color: rgba(60,59,62, 1);
+  background-color: rgba(242,238,250, 0.98);
 }
 
 .active {
-	background-color: rgba(190, 206, 255, 1);
-	box-shadow: -8px -8px 8px rgba(50, 50, 50, 0.9);
+	background-color: rgba(242,238,250, 0.98);
+	box-shadow: -8px -8px 8px  rgba(0, 0, 0, 0.5);
+	z-index: 200;
 }
 
 @media screen and (max-width: 1066px) {
