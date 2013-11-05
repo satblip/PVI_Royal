@@ -6,9 +6,35 @@
 @CLAIR rgba(241, 237, 244, 1)
 */
 
+@font-face
+{
+font-family: 'Roboto';
+src: url('../Fonts/RobotoCondensed.ttf');
+} 
+
+@font-face
+{
+font-family: 'Stroke';
+src: url('../Fonts/Stoke-Light.ttf');
+} 
+
+
 body {
 	background: url('../img/dgreyok.jpg') repeat;
 	}
+
+p {
+	font-family: 'stroke';
+	letter-spacing: 0.01em;
+	font-size: 13px;
+}
+
+h1, legend {
+	font-family: 'Roboto';
+	font-size: 21px;
+	line-height: 40px;
+	color: rgb(51, 51, 51);
+}
 
 /*header {
 	position: absolute;
@@ -22,7 +48,22 @@ body {
 */
 
 article {
-	padding-left: 10px;
+	padding: 35px;
+
+}
+
+.home {
+	height: 160px;
+	width: auto;
+	opacity:0.3;
+	z-index: 2;
+	overflow: hidden;
+
+}
+
+.home:hover {
+	opacity : 0.5;
+	cursor: pointer;
 }
 
 .colg {
@@ -55,8 +96,7 @@ article {
 	padding-left: 40px;
 	float: right;
 	width: 80%;
-	
-	top:160px;
+	top:auto;
 	overflow: hidden; 
 	color: #fff;
 	z-index: 4;
