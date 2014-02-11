@@ -1,0 +1,41 @@
+body{
+	margin-right: 20px;
+}
+
+.all {
+	width:100%;
+	padding: 20px;
+}
+
+.menu {
+	
+}
+
+.page {
+	position:relative;
+	top:0;
+}
+
+.imageresident {
+	width: 120px;
+	height: 120px;
+	float: left;
+
+}
+
+.inforesident {
+	float: left;
+}
+
+.pointeur:hover {
+	cursor: pointer;
+}
+
+.inputtext {
+	border-radius: 5px;
+}
+
+.right {
+	float: right;
+
+}

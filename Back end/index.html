@@ -1,0 +1,784 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Royal Tervuren - Consiergerie</title>
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    
+<div class='all'>       
+  <div class='row'>
+    <div class="col-md-2 menu">
+      <h2>Menu</h2>
+      <ul class="nav nav-pills nav-stacked">
+        <li id='menu1' class="active pointeur"><a id='tickets_link'>Tickets</a></li>
+        <li id='menu2' class='pointeur'><a id='messages_link'>Messages</a></li>
+        <li id='menu3' class='pointeur'><a id='residents_link'>residents</a></li>
+        <li id='menu4' class='pointeur'><a id='carnet_link'>Carnet d'adresse</a></li>
+      </ul>
+    </div>
+    
+    <!-- TICKETS -->
+    <div id='page1'>
+      <div class="col-md-10 page">
+        <h2>Tickets</h2><br>
+          <div class="alert alert-success alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Les modifications ont été faites avec succès.
+          </div>
+          <div class="alert alert-danger alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>Attention !</strong> Un problème est survenu, veuillez réessayer.
+          </div>
+          <h3>progression</h3><br>
+          <div class="progress">
+            <div class="progress-bar progress-bar-success" style="width: 35%">
+              <span >35% résoluts</span>
+            </div>
+            <div class="progress-bar progress-bar-warning" style="width: 20%">
+              <span>20% warning</span>
+            </div>
+            <div class="progress-bar progress-bar-danger" style="width: 10%">
+              <span>10% Urgent </span>
+            </div>
+          </div><br>
+          <div class="table-responsive">
+            <table class="table table-hover table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Priorité</th>
+                  <th>Appartement</th>
+                  <th>Concerne</th>
+                  <th>message</th>
+                  <th>Personne de contact</th>
+                  <th>Options</th>
+                </tr>
+              </thead>
+              <tbody id="ce que tu veux poney">
+                <tr >
+                  <th><span class="glyphicon glyphicon-ok"></span></th>
+                  <th data-toggle="modal" data-target="#ticket-modif-1"></th>
+                  <th data-toggle="modal" data-target="#ticket-modif-1">4C</th>
+                  <th data-toggle="modal" data-target="#ticket-modif-1">Ampoule defectueuse</th>
+                  <th data-toggle="modal" data-target="#ticket-modif-1">L'ampoule clignote de temps en temps</th>
+                  <th data-toggle="modal" data-target="#ticket-modif-1">...</th>
+                  <th>
+                    <span data-toggle="modal" data-target="#ticket-mail-1" class="glyphicon glyphicon-envelope pointeur"></span>&nbsp;
+                    <span data-toggle="modal" data-target="#ticket-modif-1" class="glyphicon glyphicon-wrench pointeur"></span>&nbsp;
+                    <span data-toggle="modal" data-target="#ticket-supprimer-1" class="glyphicon glyphicon-remove pointeur"></span>
+                  </th>
+                </tr>
+                <tr data-toggle="modal" data-target="#ticket-modif-2" >
+                  <th></th>
+                  <th></th>
+                  <th>3B</th>
+                  <th>Porte qui grince</th>
+                  <th>La porte de la cuisine grince</th>
+                  <th>...</th>
+                  <th>
+                    <span class="glyphicon glyphicon-envelope pointeur"></span>&nbsp;
+                    <span data-toggle="modal" data-target="#ticket-modif-2" class="glyphicon glyphicon-wrench pointeur"></span>&nbsp;
+                    <span class="glyphicon glyphicon-remove pointeur"></span>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- MODALE TYPE TICKETS -->
+
+          <div class="modal fade" id="ticket-modif-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div id="modal_ticket_modif_1" class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="myModalLabel">Modification du ticket</h4>
+                </div>
+                <div class="modal-body">
+
+                  <form role="form">
+                    <div class="form-group">
+                      <label for="ticketInputContact1">Priorité</label>
+                      <select class="form-control" id="ticketInputContact1">
+                        <option>P1</option>
+                        <option>P2</option>
+                        <option>P3</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="ticketInputAppartement1">Appartement</label>
+                      <input type="email" class="form-control" id="ticketInputAppartement1" placeholder="">
+                    </div>
+                    <div class="form-group">
+                      <label for="ticketInputConcerne1">Concerne</label>
+                      <input type="password" class="form-control" id="ticketInputConcerne1" placeholder="">
+                    </div>
+                    <div class="form-group">
+                      <label for="ticketInputMessage1">Message</label>
+                      <textarea class="form-control" id="ticketInputMessage1" rows="5"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="ticketInputContact1">Personne de contact</label>
+                      <select class="form-control" id="ticketInputContact1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> Ce ticket est résolu
+                      </label>
+                    </div>
+                  </form>
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                  <button type="button" id="ticket_modif_submit" class="btn btn-primary">Sauvegarder</button>
+                </div>
+              </div><!-- /.modal-content -->
+
+              <!-- MODALE ETAPE CONFIRMATION -->
+
+              <div id="modal_ticket_modif_2" class="modal-content" style='display: none;'>
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="myModalLabel">Modification du ticket</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group">
+                      <label>Priorité</label>
+                      <p>important</p>
+                    </div>
+                    <div class="form-group">
+                      <label>Appartement</label>
+                      <p>blablabla</p>
+                    </div>
+                    <div class="form-group">
+                      <label>Concerne</label>
+                      <p>bloblbolbo</p>
+                    </div>
+                    <div class="form-group">
+                    </div>
+                    <div class="form-group">
+                      <label>Personne de contact</label>
+                      <p>bilibilibibiia</p>
+                    </div>
+                  
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" id="ticket_modif_back" class="btn btn-default">Précédent</button>
+                  <button type="button" id="ticket_modif_submit_2" class="btn btn-primary">Sauvegarder</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal type ticket-->
+
+
+      </div>
+
+      <!-- Modale Supprimer Ticket -->
+
+      <div class="modal fade" id="ticket-supprimer-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">Supprimer le ticket</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label>Priorité</label>
+                <p>important</p>
+              </div>
+              <div class="form-group">
+                <label>Appartement</label>
+                <p>blablabla</p>
+              </div>
+              <div class="form-group">
+                <label>Concerne</label>
+                <p>bloblbolbo</p>
+              </div>
+              <div class="form-group">
+              </div>
+              <div class="form-group">
+                <label>Personne de contact</label>
+                <p>bilibilibibiia</p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Supprimer</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal Supprimer Ticket-->
+
+      <!-- Modale Mail Ticket -->
+
+      <div class="modal fade" id="ticket-mail-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">Envoyer un message</h4>
+            </div>
+            <div class="modal-body">
+              
+              <label for="ticketSujetMail">Sujet</label>
+              <input type="email" class="form-control" id="ticketSujetMail" placeholder="">
+              <div>
+                <label for="ticketSendMessage">Message</label>
+                <textarea class="form-control" id="ticketSendMessage" rows="5"></textarea>
+
+
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Envoyer</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal mail ticket-->
+
+    </div> <!-- ferme page tickets -->
+
+    <!-- Messages -->
+    <div id='page2' class='col-lg-10' style='display: none;'>
+      <h2>Messages</h2><br>
+      <div class="alert alert-success alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Le message a été envoyé avec succès.
+          </div>
+          <div class="alert alert-danger alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>Attention !</strong> Un problème est survenu, veuillez réessayer.
+          </div>
+      <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th width='35px'>#</th>
+                  <th>Nom</th>
+                  <th>Message</th>
+                  <th width='70px'>Options&nbsp;&nbsp;&nbsp;</th>
+                </tr>
+              </thead>
+              <tbody id="ce que tu veux poney">
+                <tr>
+                  <th data-toggle="modal" data-target="#message-modif-1" text-align='right'></th>
+                  <th data-toggle="modal" data-target="#message-modif-1">King Arthur</th>
+                  <th data-toggle="modal" data-target="#message-modif-1">Nettoyer mon poney</th>
+                  <th>
+                    <span data-toggle="modal" data-target="#message-modif-1" class="glyphicon glyphicon-envelope pointeur"></span>&nbsp;
+                    <span data-toggle="modal" data-target="#message-supprimer-1" class="glyphicon glyphicon-remove pointeur"></span>
+                  </th>
+                </tr>
+                <tr>
+                  <th text-align='right'><span class="glyphicon glyphicon-ok"></span></th>
+                  <th>Han Solo</th>
+                  <th>Acheter des piles pour mon sabre laser</th>
+                  <th>
+                    <span class="glyphicon glyphicon-envelope pointeur"></span>&nbsp;
+                    <span class="glyphicon glyphicon-remove pointeur"></span>
+                  </th>
+                </tr>
+              </tbody>
+            </table>      
+      </div>
+
+      <!-- Modales Pages Message -->
+
+      <div class="modal fade" id="message-modif-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div id='modal_message_content_1' class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="myModalLabel">Message</h4>
+                </div>
+                <div class="modal-body">
+                  
+                  <div>
+                    <label>De :</label>
+                    <p>King Arthur</p>
+                    <label>Sujet :</label>
+                    <p>Mettre le sujet ici</p>
+                    <label>Message :</label>
+                    <p>Mettre le message ici</p>
+                  </div>
+
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                  <button type="button" id='modale_message_repondre' class="btn btn-primary">Répondre</button>
+                </div>
+              </div><!-- /.modal-content -->
+
+              <!-- REPONSE MESSAGE MODALE -->
+              <div id='modal_message_content_2' class="modal-content" style='display: none;'>
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="myModalLabel">Répondre</h4>
+                </div>
+                <div class="modal-body">
+                  
+
+                  <div>
+                    <label>Message :</label>
+                    <textarea class="form-control" id="messageInputMessage" rows="5"></textarea>
+                  </div>
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" id='modal_message_back' class="btn btn-default">précédent</button>
+                  <button type="button" id='modal_message_submit_2' class="btn btn-primary">Envoyer</button>
+                </div>
+              </div><!-- /.modal-content -->
+
+
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+
+          <!-- Modale Supprimer Message -->
+
+          <div class="modal fade" id="message-supprimer-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title">Supprimer le message</h4>
+                </div>
+                <div class="modal-body">
+                  <div>
+                    <label>De :</label>
+                    <p>King Arthur</p>
+                    <label>Sujet :</label>
+                    <p>Mettre le sujet ici</p>
+                    <label>Message :</label>
+                    <p>Mettre le message ici</p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Supprimer</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal Supprimer Ticket-->
+
+
+    </div> <!-- ferme page MESSAGE -->
+
+    <!-- residents -->
+    <div id='page3' class='col-lg-10' style='display: none;'>
+      <h2>Résidents</h2><br>
+      <div class="alert alert-success alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Les modifications ont été faites avec succès.
+          </div>
+          <div class="alert alert-danger alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>Attention !</strong> Un problème est survenu, veuillez réessayer.
+          </div>
+      <div class="table-responsive">
+
+        <div class="panel-group" id="accordion"> <!-- ACCORDEON PAGE RESIDENTS -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                  Appartement 1A
+                </a>
+                <span id='edit_residents' class="glyphicon glyphicon-wrench pointeur right"></span>
+              </h4>
+
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse">
+              <div class="panel-body">
+
+              <!-- Residents affichage normal -->
+
+                <table id='resident_info' class='table'>
+                  <thead>
+                  <tr>
+                    <td width='125px'>Photo</td>
+                    <td>Nom</td>
+                    <td>Langue</td>
+                    <td>Contact</td>
+                    <td>Infos pratiques</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><img class='imageresident' src="aaa"></td>
+                    <td>Han Solo</td>
+                    <td>Anglais</td>
+                    <td>tel: 00514646513864<br>
+                        mail: han.solo@iamjedi.gal</td>
+                    <td>allergique au poivre</td>
+                  </tr>
+                  <tr>
+                    <td><img class='imageresident' src="aaa"></td>
+                    <td>Petit Poney</td>
+                    <td>Texan</td>
+                    <td>tel: 00514644414111<br>
+                        mail: petit.poney@poney.po</td>
+                    <td>N'aimes pas le bleu</td>
+                  </tr>
+                </tbody>
+                </table>
+
+                <!-- Residents affichage Edit style='display: none;' -->
+                <div id='resident_modifier' style='display: none;'>
+                  <table class='table'>
+                    <thead>
+                    <tr>
+                      <td width='125px'>Photo</td>
+                      <td>Nom</td>
+                      <td>Langue</td>
+                      <td>Contact</td>
+                      <td>Infos pratiques</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        Ajouter une photo :
+                        <input type="file" id='imgApp1a1' data-bfi-disabled>
+                      </td>
+                      <td>
+                        Nom :<input type="text" class="form-control" id="nomApp1a1" placeholder="">
+                      </td>
+                      <td>
+                        Langue :<input type="text" class="form-control" id="langApp1a1" placeholder="">
+                      </td>
+                      <td>tel: <input type="text" class="form-control" id="telApp1a1" placeholder=""><br>
+                          mail: <input type="text" class="form-control" id="mailApp1a1" placeholder=""></td>
+                      <td>
+                      Infos pratiques :<textarea class="form-control" id="infoApp1a1" rows="5"></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Ajouter une photo :
+                        <input type="file" id='imgApp1a2' data-bfi-disabled>
+                      </td>
+                      <td>
+                        Nom :<input type="text" class="form-control" id="nomApp1a2" placeholder="">
+                      </td>
+                      <td>
+                        Langue :<input type="text" class="form-control" id="langApp1a2" placeholder="">
+                      </td>
+                      <td>tel: <input type="text" class="form-control" id="telApp1a2" placeholder=""><br>
+                          mail: <input type="text" class="form-control" id="mailApp1a2" placeholder=""></td>
+                      <td>
+                      Infos pratiques :<textarea class="form-control" id="infoApp1a1" rows="5"></textarea>
+                      </td>
+                    </tr>
+                  </tbody>
+                  </table>
+                  <div class='modal-footer'>
+                  <button type="button" id='resident_modif_cancel' class="btn btn-default">Annuler</button>
+                  <button type="button" id='resident_modif_submit' class="btn btn-primary">Sauvegarder</button>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                  Appartement 1B
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+              <div class="panel-body">
+                INFOS SUR LES OCCUPANTS
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                  Appartement 1C
+                </a>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+              <div class="panel-body">
+                INFOS SUR LES OCCUPANTS
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- Ferme page RESIDENTS -->
+
+    <!-- PAGE CARNET D ADRESSE -->
+
+        <div id='page4' style='display: none;'>
+      <div class="col-md-10 page">
+        <h2>Carnet d'adresse</h2><br>
+
+          <div class="alert alert-success alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Les modifications ont été faites avec succès.
+          </div>
+          <div class="alert alert-success alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            L'intervenant a été ajouté avec succès.
+          </div>
+          <div class="alert alert-danger alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>Attention !</strong> Un problème est survenu, veuillez réessayer.
+          </div>
+
+        <!-- NAVBAR CARNET ADRESSE -->
+
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              
+              <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Rechercher">
+                </div>
+                <button type="submit" class="btn btn-default">Ok</button>
+              </form>
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Options <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a data-toggle="modal" data-target="#intervenant_ajout">Ajouter un intervenant</a></li>
+                    <li><a href="#">Autre chose</a></li>
+                    <li><a href="#">Encore autre chose</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Panic Button</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+          <div class="table-responsive">
+            <table class="table table-hover table-striped">
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Nom</th>
+                  <th>Adresse</th>
+                  <th>Contact</th>
+                  <th>Options</th>
+                </tr>
+              </thead>
+              <tbody id="ce que tu veux poney">
+                <tr>
+                  <th>Plombier</th>
+                  <th>Bros, Mario</th>
+                  <th>Chateau mario, Rue de la princesse 01</th>
+                  <th>Email: <br>Telephone: </th>
+                  <th>
+                    <span data-toggle="modal" data-target="#intervenant_modif" class="glyphicon glyphicon-wrench pointeur"></span>&nbsp;
+                    <span data-toggle="modal" data-target="#intervenant_supp" class="glyphicon glyphicon-remove pointeur"></span>
+                    
+                  </th>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Modale Modifier intervenant -->
+
+          <div class="modal fade" id='intervenant_modif'>
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title">Modifier l'intervenant</h4>
+                </div>
+                <div class="modal-body">
+                  <table class="table">
+
+                    
+                      <tr>
+                        <th>
+                          <label>Type :</label>
+                          <input type="text" class="form-control" id="inputType1" placeholder="">
+                        </th>
+                        <th>
+                          <label>Nom :</label>
+                          <input type="text" class="form-control" id="inputNom1" placeholder="">
+                        </th>
+                        <th>
+                          <label>Adresse :</label>
+                          <textarea type="text" class="form-control" rows="5" id="inputAdd1" placeholder=""></textarea>
+                        </th>
+                        <th>
+                          <label>Email :</label>
+                          <input type="text" class="form-control" id="inputMail1" placeholder=""><br>
+                          <label>Tel :</label>
+                          <input type="text" class="form-control" id="inputTel1" placeholder=""></th>
+                      </tr>
+                      
+                    
+                  </table>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Sauvegarder</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+
+          <!-- Modale Supprimer intervenant -->
+
+          <div class="modal fade" id='intervenant_supp'>
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title">Supprimer l'intervenant</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="table-responsive">
+                    <table class="table table-hover table-striped">
+                      <thead>
+                        <tr>
+                          <th>Type</th>
+                          <th>Nom</th>
+                          <th>Adresse</th>
+                          <th>Contact</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody id="ce que tu veux poney">
+                        <tr>
+                          <th>Plombier</th>
+                          <th>Bros, Mario</th>
+                          <th>Chateau mario, Rue de la princesse 01</th>
+                          <th>Email: <br>Telephone: </th>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Supprimer</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+
+          <!-- Modale Ajouter intervenant -->
+
+          <div class="modal fade" id='intervenant_ajout'>
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title">Ajouter un intervenant</h4>
+                </div>
+                <div class="modal-body">
+                  <table class="table">
+
+                    
+                      <tr>
+                        <th>
+                          <label>Type :</label>
+                          <input type="text" class="form-control" id="inputType1" placeholder="">
+                        </th>
+                        <th>
+                          <label>Nom :</label>
+                          <input type="text" class="form-control" id="inputNom1" placeholder="">
+                        </th>
+                        <th>
+                          <label>Adresse :</label>
+                          <textarea type="text" class="form-control" rows="5" id="inputAdd1" placeholder=""></textarea>
+                        </th>
+                        <th>
+                          <label>Email :</label>
+                          <input type="text" class="form-control" id="inputMail1" placeholder=""><br>
+                          <label>Tel :</label>
+                          <input type="text" class="form-control" id="inputTel1" placeholder=""></th>
+                      </tr>
+                      
+                    
+                  </table>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Sauvegarder</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+
+  </div> <!-- Ferme la page Carnet d adresse -->
+</div>
+    
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+  </body>
+</html>
