@@ -11,7 +11,7 @@ var loadPage = function(a,b,c,d,e,element){
 
 // Triggers
 $('#home_link').click(function(){
-	loadPage(2,3,1,4,5,$(this));
+	loadPage(2,3,1,4,5,6);
 });
 $('#services_link').click(function(){
 	loadPage(1,3,2,4,5,$(this));

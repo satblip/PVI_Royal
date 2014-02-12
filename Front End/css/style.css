@@ -3,12 +3,38 @@
 @fonceclair {rgba(60,59,62, 1)}
 @middle {rgba(72,71,75, 1)}
 @middleclair {rgba(134,132,138, 1)}
-@CLAIR {rgba(242,238,250, 1)}
+@CLAIR rgba(241, 237, 244, 1)
 */
+
+@font-face
+{
+font-family: 'Roboto';
+src: url('../Fonts/RobotoCondensed.ttf');
+} 
+
+@font-face
+{
+font-family: 'Stroke';
+src: url('../Fonts/Stoke-Light.ttf');
+} 
+
 
 body {
 	background: url('../img/dgreyok.jpg') repeat;
 	}
+
+p {
+	font-family: 'stroke';
+	letter-spacing: 0.01em;
+	font-size: 13px;
+}
+
+h1, legend {
+	font-family: 'Roboto';
+	font-size: 21px;
+	line-height: 40px;
+	color: rgb(51, 51, 51);
+}
 
 /*header {
 	position: absolute;
@@ -22,7 +48,22 @@ body {
 */
 
 article {
-	padding-left: 10px;
+	padding: 35px;
+
+}
+
+.home {
+	height: 160px;
+	width: auto;
+	opacity:0.3;
+	z-index: 2;
+	overflow: hidden;
+
+}
+
+.home:hover {
+	opacity : 0.5;
+	cursor: pointer;
 }
 
 .colg {
@@ -41,7 +82,7 @@ article {
 	position: absolute;
 	right:35px;
 	top: 35px;
-	background-color: rgba(242,238,250, 0.98);
+	background-color: rgba(241, 237, 244, 1);
 	width: 80%;
 	border-radius: 4px;
 	height: 90%;
@@ -55,8 +96,7 @@ article {
 	padding-left: 40px;
 	float: right;
 	width: 80%;
-	
-	top:160px;
+	top:auto;
 	overflow: hidden; 
 	color: #fff;
 	z-index: 4;
@@ -109,11 +149,11 @@ article {
 }
 #nav li.active {
   color: rgba(60,59,62, 1);
-  background-color: rgba(242,238,250, 0.98);
+  background-color: rgba(241, 237, 244, 1);
 }
 
 .active {
-	background-color: rgba(242,238,250, 0.98);
+	background-color: rgba(241, 237, 244, 1);
 	box-shadow: -8px -8px 8px  rgba(0, 0, 0, 0.5);
 	z-index: 200;
 }
