@@ -1,0 +1,169 @@
+.all {
+  padding: 15px;
+}
+
+.pointeur {
+  cursor: pointer;
+}
+
+nav {
+  margin-bottom: 5px;
+}
+
+.inside {
+  margin-left: 25px;
+}
+
+/*HOME*/
+
+#page1, #page2 {
+  padding: 25px;
+}
+
+.news_date{
+  text-align: right;
+  font-size: 10px;
+  margin-top: -20px;
+  margin-right: 18px;
+}
+
+
+/*SERVICES*/
+
+div#page_services{
+  padding: 0px;
+  text-align: center;
+  align: center;
+}
+
+div.circle {
+width: 180px;
+height: 190px;
+border-radius: 120px;
+position: relative;
+margin: 12px;
+display: inline-table;
+}
+
+span.circle-content {
+width: 180px;
+height: 180px;
+background: transparent;
+border-radius: 120px;
+display: inline-block;
+border-width: 9px;
+border-style: solid;
+border-color: #373f5b;
+z-index: 20;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+-webkit-transition-property: border-width;
+-moz-transition-property: border-width;
+-o-transition-property: border-width;
+transition-property: border-width;
+-webkit-transition-duration: .5s;
+-moz-transition-duration: .5s;
+-o-transition-duration: .5s;
+transition-duration: .5s;
+}
+
+span.circle-content:hover, span.circle-content:focus {
+  border-width: 3px;
+}
+
+.logo_service{
+  color: #232f5b;
+  font-size: 80px;
+  position: absolute !important;
+  top: 40px !important;
+  z-index: 1;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+
+.text_service{
+  color: #232f5b;
+  font-size: 18px;
+  position: absolute !important;
+  top: 132px !important;
+  z-index: 1;
+}
+
+.services_text-1{
+  left: 64px !important;
+}
+
+.services_logo-1{
+  left: 51px !important;
+}
+
+.services_text-2{
+  left: 64px !important;
+}
+
+.services_logo-2{
+  left: 47px !important;
+}
+
+.services_text-3{
+  left: 55px !important;
+}
+
+.services_logo-3{
+  left: 53px !important;
+}
+
+.services_text-4{
+  left: 52px !important;
+}
+
+.services_logo-4{
+  left: 51px !important;
+}
+
+.services_text-5{
+  left: 56px !important;
+}
+
+.services_logo-5{
+  left: 50px !important;
+}
+
+.services_text-6{
+  left: 65px !important;
+}
+
+.services_logo-6{
+  left: 47px !important;
+}
+
+.services_text-7{
+  left: 68px !important;
+}
+
+.services_logo-7{
+  left: 45px !important;
+}
+
+.services_text-8{
+  left: 62px !important;
+}
+
+.services_logo-8{
+  left: 46px !important;
+}
+
+.services_text-9{
+  left: 66px !important;
+}
+
+.services_logo-9{
+  left: 50px !important;
+}
+
+/*FIN SERVICES*/

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+    <title>Intranet - Royal Tervuren</title>
+
+
+    <!--[if (gt IE 8) | (IEMobile)]><!-->
+    
+    <link rel="stylesheet" href="css/style.css">
+    <!--<![endif]-->
+    <!--[if (lt IE 9) & (!IEMobile)]>
+    <link rel="stylesheet" href="css/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <link href="css/datepicker.css" rel="stylesheet" media="screen">
+</head>
+
+<body>`
+
+<!-- Menu -->
+<div class='all'>
+
+    <nav>
+      <ul class="nav nav-tabs ">
+        
+        <li id='home_link' class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Services <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li id='a_link' data-toggle="modal" data-target="#classicservice"><a href="#">Classic services</a></li>
+            <li id='b_link' data-toggle="modal" data-target="#maidservice"><a href="#">Maid service</a></li>
+            <li id='c_link' data-toggle="modal" data-target="#maintservice"><a href="#">Repair services</a></li>
+            <li class="divider"></li>
+            <li id='d_link' data-toggle="modal" data-target="#privateservice"><a href="#">Private Services</a></li>
+          </ul>
+        </li>
+        <li id='concierge_link' data-toggle="modal" data-target="#contactform"><a href="#">Contact</a></li>
+        <li id='info_link'><a href="#">Informations</a></li>
+      </ul>
+    </nav>
+
+    <!-- PAGE HOME -->
+
+    <div id="page1">
+
+      <legend>Royal Tervuren - News</legend>
+        <div class="alert alert-success">
+          <p class="news_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nulla vel magna dapibus bibendum.</p>
+          <p class="news_date">22th of february 2014</p>
+        </div>
+
+        <div class="alert alert-success">
+          <p class="news_content">Pellentesque fermentum facilisis ligula eu gravida. Ut ut placerat neque. </p>
+          <p class="news_date">22th of february 2014</p>
+        </div>
+
+        <div class="alert alert-success">
+          <p class="news_content">Sed vulputate pellentesque purus at viverra. Phasellus tincidunt quam a imperdiet fermentum. </p>
+          <p class="news_date">22th of february 2014</p>
+        </div>
+
+        <div class="alert alert-success">
+          <p class="news_content">Pellentesque iaculis ut mi nec auctor. Curabitur dui lorem, consequat quis tortor sit amet, tristique luctus quam. </p>
+          <p class="news_date">22th of february 2014</p>
+        </div>
+
+        <div>
+          <p class="news_content">Nam cursus magna mi, vel volutpat nibh commodo vel. Nulla ac sollicitudin lectus, aliquam consectetur eros.</p>
+          <p class="news_date">22th of february 2014</p>
+        </div>
+
+      <legend>Tickets</legend>
+        <div class="table-responsive">
+            <table class="table table-hover table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Priorité</th>
+                  <th>Appartement</th>
+                  <th>Concerne</th>
+                  <th>message</th>
+                  <th>Personne de contact</th>
+                  <th>Options</th>
+                </tr>
+              </thead>
+              <tbody id="ce que tu veux poney">
+                <tr >
+                  <th><span class="glyphicon glyphicon-ok"></span></th>
+                  <th data-toggle="modal" data-target="#ticket-modif-1"></th>
+                  <th data-toggle="modal" data-target="#ticket-modif-1">4C</th>
+                  <th data-toggle="modal" data-target="#ticket-modif-1">Ampoule defectueuse</th>
+                  <th data-toggle="modal" data-target="#ticket-modif-1">L'ampoule clignote de temps en temps</th>
+                  <th data-toggle="modal" data-target="#ticket-modif-1">...</th>
+                  <th>
+                    <span data-toggle="modal" data-target="#ticket-mail-1" class="glyphicon glyphicon-envelope pointeur"></span>&nbsp;
+                    <span data-toggle="modal" data-target="#ticket-modif-1" class="glyphicon glyphicon-wrench pointeur"></span>&nbsp;
+                    <span data-toggle="modal" data-target="#ticket-supprimer-1" class="glyphicon glyphicon-remove pointeur"></span>
+                  </th>
+                </tr>
+                <tr data-toggle="modal" data-target="#ticket-modif-2" >
+                  <th></th>
+                  <th></th>
+                  <th>3B</th>
+                  <th>Porte qui grince</th>
+                  <th>La porte de la cuisine grince</th>
+                  <th>...</th>
+                  <th>
+                    <span class="glyphicon glyphicon-envelope pointeur"></span>&nbsp;
+                    <span data-toggle="modal" data-target="#ticket-modif-2" class="glyphicon glyphicon-wrench pointeur"></span>&nbsp;
+                    <span class="glyphicon glyphicon-remove pointeur"></span>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+    </div>
+
+
+<!-- PAGE SERVICES -->
+  
+    <!-- CLASSIC SERVICE -->
+    
+    <div class="modal fade" id="classicservice" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Classic services</h4>
+          </div>
+          <div class="modal-body">
+            <p>Choose your service</p>
+            <select class="form-control">
+              <option>Post service</option>
+              <option>Laundry service</option>
+              <option>Sewing services</option>
+              <option>Shoe repairing</option>
+            </select><br>
+            <p>Message</p>
+            <textarea class="form-control" rows="5"></textarea>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- MAID SERVICE -->
+    
+    <div class="modal fade" id="maidservice" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Maid service</h4>
+          </div>
+          <div class="modal-body">
+            <p>Your next maid service is planned on the <strong>26/4/2013 - Morning</strong></p>
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" id="addmaidday" value="option1">
+                Add an extra date
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" id="changemaidday" value="option2">
+                Change the day
+              </label>
+            </div>
+            <div id='daa' class="row" style='display:none'>
+              <div class='col-md-4'>
+                <input id='datez' size="16" type="date">
+                <select class="form-control" id='dayz' style='display:none'>
+                  <option>Monday</option>
+                  <option>Thusday</option>
+                  <option>Wednesday</option>
+                  <option>Thursday</option>
+                  <option>Friday</option>
+                </select>
+              </div>
+              <div class='col-md-8'>
+                <select class="form-control aaa">
+                  <option>Morning</option>
+                  <option>Afternoon</option>
+                </select>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Send</button>
+            </div>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- MAINTENANCE -->
+
+    <div class="modal fade" id="maintservice" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Repair services</h4>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="maintenancesubject">Subject</label>
+              <input type="text" class="form-control" id="maintenancesubject" placeholder="Enter subject">
+            </div>
+            <label for="maintenancemess">Message</label>
+            <textarea id='maintenancemess' class="form-control" rows="5"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- PRIVATE SERVICES -->
+
+    <div class="modal fade" id="privateservice" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Private Service</h4>
+          </div>
+          <div class="modal-body">
+            <p>Choose your service</p>
+            <select class="form-control">
+              <option>Event planning (dinner, reception, ...)</option>
+              <option>Travel (flight ticket, shuttle services, ...)</option>
+              <option>Reservation (restaurant, theater, ...)</option>
+              <option>Babysitting</option>
+              <option>Schools</option>
+              <option>Pets services</option>
+              <option>Personal shopping</option>
+              <option>Car service</option>
+            </select><br>
+            <p>Message</p>
+            <textarea class="form-control" rows="5"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- CONTACT -->
+
+    <div class="modal fade" id="contactform" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Contact us</h4>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="maintenancesubject">wich service to contact</label>
+              <select class="form-control">
+                <option>Conciergerie</option>
+                <option>Billing</option>
+                <option>Direction</option>
+              </select><br>
+            </div>
+            <label for="maintenancemess">Message</label>
+            <textarea id='maintenancemess' class="form-control" rows="5"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    
+    <!-- INFORMATION -->
+
+  <div id='page2' style='display:none'>
+    <legend>Informations</legend>
+    <div class='inside'>
+      <p><strong>Important telephone number</strong><br>
+      - police : <br>
+      - Fireman : <br>
+      - Concierge : <br>
+      </p>
+      <p><strong>Wifi information</strong><br>
+      - Name : <br>
+      - Password : <br>
+      </p>
+      <p><strong>Maid passing day</strong><br>
+      - Day : <br>
+      - Time : <br>
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/core.js"></script>
+    <script src="js/design.js"></script>
+
+</body>
+</html>
