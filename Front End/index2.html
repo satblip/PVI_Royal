@@ -22,7 +22,6 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="css/style.css" rel="stylesheet" media="screen">
-    <link href="css/datepicker.css" rel="stylesheet" media="screen">
 </head>
 
 <body>`
@@ -34,6 +33,7 @@
       <ul class="nav nav-tabs ">
         
         <li id='home_link' class="active"><a href="#">Home</a></li>
+        <li id='info_link'><a href="#">Informations</a></li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">
             Services <span class="caret"></span>
@@ -47,7 +47,6 @@
           </ul>
         </li>
         <li id='concierge_link' data-toggle="modal" data-target="#contactform"><a href="#">Contact</a></li>
-        <li id='info_link'><a href="#">Informations</a></li>
       </ul>
     </nav>
 
@@ -86,20 +85,16 @@
             <table class="table table-hover table-striped">
               <thead>
                 <tr>
-                  <th>#</th>
-                  <th>Priorité</th>
-                  <th>Appartement</th>
-                  <th>Concerne</th>
+                  <th>Resolved</th>
+                  <th>About</th>
                   <th>message</th>
-                  <th>Personne de contact</th>
+                  <th>Contact</th>
                   <th>Options</th>
                 </tr>
               </thead>
               <tbody id="ce que tu veux poney">
                 <tr >
                   <th><span class="glyphicon glyphicon-ok"></span></th>
-                  <th data-toggle="modal" data-target="#ticket-modif-1"></th>
-                  <th data-toggle="modal" data-target="#ticket-modif-1">4C</th>
                   <th data-toggle="modal" data-target="#ticket-modif-1">Ampoule defectueuse</th>
                   <th data-toggle="modal" data-target="#ticket-modif-1">L'ampoule clignote de temps en temps</th>
                   <th data-toggle="modal" data-target="#ticket-modif-1">...</th>
@@ -111,8 +106,6 @@
                 </tr>
                 <tr data-toggle="modal" data-target="#ticket-modif-2" >
                   <th></th>
-                  <th></th>
-                  <th>3B</th>
                   <th>Porte qui grince</th>
                   <th>La porte de la cuisine grince</th>
                   <th>...</th>
@@ -318,11 +311,48 @@
 
   </div>
 
+  <!-- POPUPS  OK PAS OK -->
+
+  <div class="modal fade" id="messok" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Contact us</h4>
+          </div>
+          <div class="modal-body">
+            <p><strong>Your message has been sent</strong></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="modal fade" id="messpasok" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Information</h4>
+          </div>
+          <div class="modal-body">
+            <p><strong>A problem occured. Please try again !</strong></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
 </div>
 
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/core.js"></script>
     <script src="js/design.js"></script>
 
